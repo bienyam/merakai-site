@@ -51,7 +51,11 @@ html, body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+}
+body {
+  /* Don't use overflow-x:hidden here — it breaks position:sticky on the nav.
+     Horizontal overflow is prevented by ensuring no element exceeds 100vw width. */
+  max-width: 100vw;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -474,70 +478,10 @@ h1.headline em {
 .section-promise .emphasis { color: var(--text); font-weight: 400; }
 
 /* ============================================================
-   SECTION 3 — THREE PILLARS
+   SHARED — section header grid (used by Platform, How, etc.)
    ============================================================ */
-.section-pillars { padding: 140px 0 120px; }
 .section-header-grid { margin-bottom: 64px; max-width: 880px; }
 .section-header-grid .section-headline { font-size: clamp(34px, 4vw, 50px); }
-
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.pillar {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 36px 32px 40px;
-  position: relative;
-  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-}
-.pillar:hover {
-  transform: translateY(-2px);
-  border-color: var(--line-strong);
-  background: var(--surface-2);
-}
-.pillar-featured {
-  background: linear-gradient(180deg, rgba(55, 138, 221, 0.08), var(--surface) 60%);
-  border-color: rgba(55, 138, 221, 0.3);
-}
-.pillar-featured:hover {
-  border-color: rgba(55, 138, 221, 0.5);
-}
-.pillar-num {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text-faint);
-  letter-spacing: 0.06em;
-  margin-bottom: 28px;
-}
-.pillar-icon {
-  width: 48px; height: 48px;
-  color: var(--blue-bright);
-  margin-bottom: 24px;
-}
-.pillar-icon svg { width: 100%; height: 100%; }
-.pillar-title {
-  font-family: var(--display);
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  color: var(--text);
-  margin-bottom: 10px;
-}
-.pillar-tagline {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--blue-bright);
-  margin-bottom: 18px;
-}
-.pillar-body {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: var(--text-soft);
-  font-weight: 300;
-}
 
 /* ============================================================
    SECTION 4 — TRUST PRINCIPLES
@@ -770,7 +714,6 @@ h1.headline em {
   .hero { padding: 64px 0 96px; }
   .hero-grid { grid-template-columns: 1fr; gap: 56px; }
   .section { padding: 88px 0; }
-  .pillars-grid { grid-template-columns: 1fr; }
   .principles-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-grid { flex-direction: column; align-items: flex-start; gap: 24px; }
   .footer-right { align-items: flex-start; }
@@ -882,91 +825,7 @@ h1.headline em {
 }
 
 /* ============================================================
-   SECTION — WHAT CHANGES (differentiator)
-   ============================================================ */
-.section-changes {
-  padding: 140px 0 120px;
-  position: relative;
-}
-.section-changes::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 600px 300px at 30% 20%, rgba(55, 138, 221, 0.04), transparent 60%),
-    radial-gradient(ellipse 500px 250px at 80% 80%, rgba(55, 138, 221, 0.04), transparent 60%);
-  pointer-events: none;
-}
-.section-changes > * { position: relative; }
-.section-changes .section-header-grid { margin-bottom: 64px; max-width: 880px; }
-
-.changes-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.change-row {
-  display: grid;
-  grid-template-columns: 1fr 56px 1fr;
-  gap: 0;
-  align-items: stretch;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: border-color 0.2s ease;
-}
-.change-row:hover {
-  border-color: var(--line-strong);
-}
-.change-before, .change-after {
-  padding: 28px 32px;
-}
-.change-before {
-  background: rgba(255, 255, 255, 0.02);
-}
-.change-after {
-  background: linear-gradient(135deg, rgba(55, 138, 221, 0.06), rgba(55, 138, 221, 0.01));
-  border-left: 1px solid var(--line);
-}
-.change-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-elevated);
-  color: var(--blue-bright);
-  border-left: 1px solid var(--line);
-  border-right: 1px solid var(--line);
-}
-.change-arrow svg {
-  width: 28px;
-  height: 22px;
-  opacity: 0.7;
-}
-.change-label {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.10em;
-  color: var(--text-faint);
-  margin-bottom: 12px;
-}
-.change-label-merakai {
-  color: var(--blue-bright);
-}
-.change-text {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text-soft);
-  font-weight: 300;
-}
-.change-after .change-text {
-  color: var(--text);
-}
-
-/* ============================================================
-   RESPONSIVE — new sections
+   RESPONSIVE — sections
    ============================================================ */
 @media (max-width: 720px) {
   .stage {
@@ -977,25 +836,200 @@ h1.headline em {
   .stage-num { width: 36px; height: 36px; font-size: 12px; }
   .stage-title { font-size: 20px; }
   .stage-body { font-size: 14.5px; }
+}
 
-  .change-row {
-    grid-template-columns: 1fr;
+/* ============================================================
+   BACK TO TOP — floating button
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--text-soft);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s 0.25s, color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  z-index: 40;
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s, color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.back-to-top:hover {
+  color: var(--blue-bright);
+  border-color: var(--blue);
+  background: var(--surface-2);
+}
+.back-to-top svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Make the nav logo cursor obviously a pointer (it's already a link, but emphasize) */
+.nav-logo { cursor: pointer; }
+
+@media (max-width: 560px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
   }
-  .change-after {
-    border-left: none;
-    border-top: 1px solid var(--line);
-  }
-  .change-arrow {
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    padding: 12px 0;
-  }
-  .change-arrow svg {
-    transform: rotate(90deg);
-  }
-  .change-before, .change-after {
-    padding: 24px;
-  }
+}
+
+/* ============================================================
+   SECTION — THE PLATFORM (3 phases × 2 capabilities)
+   ============================================================ */
+.section-platform { padding: 140px 0 120px; }
+.section-platform .section-header-grid { margin-bottom: 80px; max-width: 880px; }
+
+.phases {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+}
+
+.phase {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.phase-header {
+  max-width: 880px;
+}
+.phase-eyebrow {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--blue-bright);
+  margin-bottom: 16px;
+}
+.phase-pitch {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0;
+}
+.phase-pitch em {
+  font-style: italic;
+  color: var(--blue-bright);
+}
+
+.capability-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.capability {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px 36px;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  position: relative;
+}
+.capability:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  background: var(--surface-2);
+}
+.capability-icon {
+  width: 44px; height: 44px;
+  color: var(--blue-bright);
+  margin-bottom: 22px;
+}
+.capability-icon svg { width: 100%; height: 100%; }
+.capability-title {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+.capability-tagline {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--blue-bright);
+  margin: 0 0 16px;
+}
+.capability-body {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-soft);
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .phases { gap: 64px; }
+  .capability-pair { grid-template-columns: 1fr; }
+  .phase-pitch { font-size: clamp(24px, 5.5vw, 32px); }
+}
+
+/* ============================================================
+   HERO TRUST STRIP — small reassurance row below CTAs
+   ============================================================ */
+.trust-strip {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  margin-top: 32px;
+  padding: 0;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.65s ease-out forwards;
+}
+.trust-strip li {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+  position: relative;
+  padding-left: 18px;
+}
+.trust-strip li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue-bright);
+  opacity: 0.6;
+}
+.trust-strip li:first-child {
+  padding-left: 0;
+}
+.trust-strip li:first-child::before {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .trust-strip { gap: 6px 14px; margin-top: 24px; }
+  .trust-strip li { font-size: 11.5px; padding-left: 14px; }
 }

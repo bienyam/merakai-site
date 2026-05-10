@@ -35,7 +35,6 @@
       <ul class="nav-links">
         <li><a href="#how">How it works</a></li>
         <li><a href="#pillars">Platform</a></li>
-        <li><a href="#what-changes">Why MerakAi</a></li>
         <li><a href="#principles">Trust</a></li>
       </ul>
       <div class="nav-cta">
@@ -76,6 +75,12 @@
               See the platform
             </a>
           </div>
+
+          <ul class="trust-strip" aria-label="Trust commitments">
+            <li>Your data never trains AI models</li>
+            <li>Defensible audit trail</li>
+            <li>You decide. Always.</li>
+          </ul>
         </div>
 
         <!-- Product mockup -->
@@ -301,63 +306,137 @@
       </div>
     </section>
 
-    <!-- ==================== SECTION 3: THE THREE PILLARS ==================== -->
-    <section id="pillars" class="section section-pillars">
+    <!-- ==================== SECTION: THE PLATFORM (3 phases, 6 capabilities) ==================== -->
+    <section id="pillars" class="section section-platform">
       <div class="container">
         <div class="section-header-grid">
           <div class="section-eyebrow">The platform</div>
           <h2 class="section-headline">
-            Three capabilities, <em>built from the ground up</em> for litigation.
+            Three things change when your platform <em>reads the case.</em>
           </h2>
         </div>
 
-        <div class="pillars-grid">
+        <div class="phases">
 
-          <!-- PILLAR 1: AI Privilege Detection -->
-          <div class="pillar">
-            <div class="pillar-num">01</div>
-            <div class="pillar-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none">
-                <path d="M24 6 L40 12 L40 26 C40 34 33 40 24 42 C15 40 8 34 8 26 L8 12 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
-                <path d="M17 24 L22 29 L31 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <!-- PHASE 1 — BEFORE REVIEW -->
+          <div class="phase">
+            <div class="phase-header">
+              <div class="phase-meta">
+                <span class="phase-eyebrow">Phase 1 — Before review</span>
+                <h3 class="phase-pitch">Most platforms <em>wait for you.</em> MerakAi shows up early.</h3>
+              </div>
             </div>
-            <h3 class="pillar-title">AI Privilege Detection</h3>
-            <p class="pillar-tagline">Stop missing privileged documents in keyword searches.</p>
-            <p class="pillar-body">MerakAi reads every document for the substance of attorney-client communication, work product, and common interest privilege — not just the words "attorney" or "confidential." It flags potential privilege with a confidence level and the reasoning behind it. You confirm, override, or refine. Every call is logged.</p>
+
+            <div class="capability-pair">
+              <div class="capability">
+                <div class="capability-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.2"/>
+                    <line x1="24" y1="6" x2="24" y2="42" stroke="currentColor" stroke-width="2.2"/>
+                    <path d="M9 14 L39 34" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                    <circle cx="36" cy="32" r="3" fill="currentColor"/>
+                  </svg>
+                </div>
+                <h4 class="capability-title">AI Case Theory</h4>
+                <p class="capability-tagline">Tell us your case. We'll build the strategy.</p>
+                <p class="capability-body">Upload a complaint — or answer 10 guided questions if you don't have one. MerakAi extracts every party, claim, cause of action, and damages figure, then builds a case theory tailored to which side you represent. That theory drives every AI decision downstream. Update as the case evolves; the platform re-reads everything against the new frame.</p>
+              </div>
+
+              <div class="capability">
+                <div class="capability-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none">
+                    <rect x="8" y="10" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <line x1="14" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="14" y1="24" x2="26" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="28" y1="18" x2="34" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2"/>
+                    <line x1="30" y1="24" x2="34" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2"/>
+                    <line x1="14" y1="30" x2="34" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2"/>
+                  </svg>
+                </div>
+                <h4 class="capability-title">AI Evidence Mapping</h4>
+                <p class="capability-tagline">Know what's missing before opposing counsel does.</p>
+                <p class="capability-body">Most platforms only show you what you've loaded. MerakAi maps gaps in your collection, identifies custodians you haven't pulled from, and flags spoliation risks before they become problems. What's missing matters as much as what's there.</p>
+              </div>
+            </div>
           </div>
 
-          <!-- PILLAR 2: Two-Tier Coding -->
-          <div class="pillar pillar-featured">
-            <div class="pillar-num">02</div>
-            <div class="pillar-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none">
-                <rect x="6" y="10" width="16" height="28" rx="2" stroke="currentColor" stroke-width="2.2"/>
-                <rect x="26" y="10" width="16" height="28" rx="2" stroke="currentColor" stroke-width="2.2"/>
-                <line x1="10" y1="18" x2="18" y2="18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-                <line x1="10" y1="24" x2="18" y2="24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-                <line x1="10" y1="30" x2="14" y2="30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              </svg>
+          <!-- PHASE 2 — DURING REVIEW -->
+          <div class="phase">
+            <div class="phase-header">
+              <div class="phase-meta">
+                <span class="phase-eyebrow">Phase 2 — During review</span>
+                <h3 class="phase-pitch">Review <em>decisions,</em> not documents.</h3>
+              </div>
             </div>
-            <h3 class="pillar-title">Two-Tier Coding</h3>
-            <p class="pillar-tagline">AI suggests. You decide. Side by side.</p>
-            <p class="pillar-body">Every document arrives with an AI recommendation already in place — responsiveness, privilege, issue tags, confidentiality. Your reviewers see the suggestion next to a blank human field. Accept, reject, or refine in one click. When you reject, MerakAi asks why — and learns. Ten times the speed without ceding a single decision to the machine.</p>
+
+            <div class="capability-pair">
+              <div class="capability">
+                <div class="capability-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none">
+                    <path d="M24 6 L40 12 L40 26 C40 34 33 40 24 42 C15 40 8 34 8 26 L8 12 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                    <path d="M17 24 L22 29 L31 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h4 class="capability-title">AI Privilege Detection</h4>
+                <p class="capability-tagline">Stop missing privileged documents in keyword searches.</p>
+                <p class="capability-body">Every document is read for the substance of attorney-client communication, work product, and common interest privilege — not just the words "attorney" or "confidential." Each flag comes with a confidence level and the reasoning behind it. You confirm, override, or refine. Every call is logged.</p>
+              </div>
+
+              <div class="capability">
+                <div class="capability-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none">
+                    <rect x="6" y="10" width="16" height="28" rx="2" stroke="currentColor" stroke-width="2.2"/>
+                    <rect x="26" y="10" width="16" height="28" rx="2" stroke="currentColor" stroke-width="2.2"/>
+                    <line x1="10" y1="18" x2="18" y2="18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                    <line x1="10" y1="24" x2="18" y2="24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                    <line x1="10" y1="30" x2="14" y2="30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <h4 class="capability-title">Two-Tier Coding</h4>
+                <p class="capability-tagline">AI suggests. You decide. Side by side.</p>
+                <p class="capability-body">Every document arrives with an AI recommendation already in place — responsiveness, privilege, issue tags, confidentiality. Your reviewers see the suggestion next to a blank human field. Accept, reject, or refine in one click. When you reject, MerakAi asks why — and learns. Ten times the speed without ceding a single decision to the machine.</p>
+              </div>
+            </div>
           </div>
 
-          <!-- PILLAR 3: Strategy Builder -->
-          <div class="pillar">
-            <div class="pillar-num">03</div>
-            <div class="pillar-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none">
-                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.2"/>
-                <line x1="24" y1="6" x2="24" y2="42" stroke="currentColor" stroke-width="2.2"/>
-                <path d="M9 14 L39 34" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-                <circle cx="36" cy="32" r="3" fill="currentColor"/>
-              </svg>
+          <!-- PHASE 3 — AFTER REVIEW -->
+          <div class="phase">
+            <div class="phase-header">
+              <div class="phase-meta">
+                <span class="phase-eyebrow">Phase 3 — When the response is due</span>
+                <h3 class="phase-pitch">Three days of work in <em>three minutes.</em></h3>
+              </div>
             </div>
-            <h3 class="pillar-title">Case Theory</h3>
-            <p class="pillar-tagline">Tell us your case. We'll surface what wins it.</p>
-            <p class="pillar-body">Walk through a guided case-theory questionnaire — claims, defenses, key dates, custodians, what you need to prove and what you need to find. MerakAi turns it into a living research plan and runs it across your document set continuously. Strong evidence rises. Weak spots get flagged. You see your case the way opposing counsel will.</p>
+
+            <div class="capability-pair">
+              <div class="capability">
+                <div class="capability-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none">
+                    <path d="M10 8 L30 8 L38 16 L38 38 C38 39 37 40 36 40 L12 40 C11 40 10 39 10 38 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M30 8 L30 16 L38 16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <line x1="16" y1="24" x2="32" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="16" y1="30" x2="28" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <h4 class="capability-title">AI Response Drafting</h4>
+                <p class="capability-tagline">Paste their requests. We draft the responses.</p>
+                <p class="capability-body">Paste opposing counsel's RFPs. MerakAi parses every request, drafts responses with appropriate legal objections, links the responsive documents to each one, and generates a filing-ready response. The single biggest time-sink in document discovery, collapsed.</p>
+              </div>
+
+              <div class="capability">
+                <div class="capability-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none">
+                    <path d="M24 6 C14 6 6 13 6 22 C6 26 8 30 11 33 L9 41 L17 38 C19 39 21 39 24 39 C34 39 42 32 42 22 C42 13 34 6 24 6 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="17" cy="22" r="1.6" fill="currentColor"/>
+                    <circle cx="24" cy="22" r="1.6" fill="currentColor"/>
+                    <circle cx="31" cy="22" r="1.6" fill="currentColor"/>
+                  </svg>
+                </div>
+                <h4 class="capability-title">Ask MerakAi</h4>
+                <p class="capability-tagline">Ask any question. Get a real answer.</p>
+                <p class="capability-body">"What custodians have we collected from?" "Show me every document that contradicts their answer to RFP 7." Plain-English questions, real answers — not keyword hits. The platform knows your case because it's been reading it the whole time.</p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -422,94 +501,7 @@
             </div>
             <div class="principle-content">
               <h3 class="principle-title">Your data. Your control.</h3>
-              <p class="principle-body">AI analysis can be disabled at the matter or document level. Anthropic, our AI partner, never trains models on your data. Period.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== SECTION 6: WHAT CHANGES ==================== -->
-    <section id="what-changes" class="section section-changes">
-      <div class="container">
-        <div class="section-header-grid">
-          <div class="section-eyebrow">What changes</div>
-          <h2 class="section-headline">
-            What changes when your platform <em>reads the case.</em>
-          </h2>
-          <p class="section-lede">
-            Legacy review platforms hold your documents. MerakAi is different — and the difference shows up in the parts of litigation that matter most.
-          </p>
-        </div>
-
-        <div class="changes-grid">
-
-          <!-- Row 1 -->
-          <div class="change-row">
-            <div class="change-before">
-              <div class="change-label">Legacy platforms</div>
-              <p class="change-text">Documents sit in a repository. You search them with keywords. Hits return without context. The platform doesn't know what your case is about.</p>
-            </div>
-            <div class="change-arrow" aria-hidden="true">
-              <svg viewBox="0 0 32 24" fill="none">
-                <path d="M2 12 L26 12 M20 6 L26 12 L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="change-after">
-              <div class="change-label change-label-merakai">With MerakAi</div>
-              <p class="change-text">Every document has been read. Themes, custodians, and contradictions are surfaced before you start. The platform understands what you're trying to prove — and looks for it.</p>
-            </div>
-          </div>
-
-          <!-- Row 2 -->
-          <div class="change-row">
-            <div class="change-before">
-              <div class="change-label">Legacy platforms</div>
-              <p class="change-text">Privilege review is a manual sweep. You hope your reviewers caught it. Misses don't surface until the other side raises them in a clawback motion.</p>
-            </div>
-            <div class="change-arrow" aria-hidden="true">
-              <svg viewBox="0 0 32 24" fill="none">
-                <path d="M2 12 L26 12 M20 6 L26 12 L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="change-after">
-              <div class="change-label change-label-merakai">With MerakAi</div>
-              <p class="change-text">Privilege candidates are flagged on every document with confidence levels and reasoning. You confirm, override, or refine. Every decision attributed and logged. Defensible by design.</p>
-            </div>
-          </div>
-
-          <!-- Row 3 -->
-          <div class="change-row">
-            <div class="change-before">
-              <div class="change-label">Legacy platforms</div>
-              <p class="change-text">Strategy lives in your head, in case management software, in a separate brief. The review tool doesn't know about it. Findings don't ladder back to the theory of the case.</p>
-            </div>
-            <div class="change-arrow" aria-hidden="true">
-              <svg viewBox="0 0 32 24" fill="none">
-                <path d="M2 12 L26 12 M20 6 L26 12 L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="change-after">
-              <div class="change-label change-label-merakai">With MerakAi</div>
-              <p class="change-text">Your case theory lives in the platform. Every document is read against it. Strong evidence rises. Weak spots get flagged. The strategy and the review are the same activity.</p>
-            </div>
-          </div>
-
-          <!-- Row 4 -->
-          <div class="change-row">
-            <div class="change-before">
-              <div class="change-label">Legacy platforms</div>
-              <p class="change-text">AI features are bolted on years after the platform was built. Coding suggestions live in a separate panel. Confidence is opaque. You either trust the model or you don't.</p>
-            </div>
-            <div class="change-arrow" aria-hidden="true">
-              <svg viewBox="0 0 32 24" fill="none">
-                <path d="M2 12 L26 12 M20 6 L26 12 L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="change-after">
-              <div class="change-label change-label-merakai">With MerakAi</div>
-              <p class="change-text">Built from day one as an AI-native platform. Every suggestion comes with confidence and reasoning. Every override teaches the system. You're not trusting a black box — you're working with a partner that shows its work.</p>
+              <p class="principle-body">Disable AI analysis at the matter level or the document level — it's your call, your matter. Whatever you bring to MerakAi is processed under enterprise privacy terms and is never used to train AI models. No exceptions, no fine print.</p>
             </div>
           </div>
 
@@ -544,7 +536,7 @@
           </div>
           <input type="hidden" name="_subject" value="MerakAi — new contact" />
           <input type="text" name="_gotcha" style="display:none" />
-          <p class="form-disclaimer">No spam. We email when there's something real to say.</p>
+          <p class="form-disclaimer">Your email goes to support@merakidiscovery.com. We don't share it, sell it, or add you to a marketing list.</p>
         </form>
 
         <div id="waitlistSuccess" class="waitlist-success" hidden>
@@ -571,6 +563,13 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to top floating button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
 
   <script src="/script.js"></script>
 </body>
