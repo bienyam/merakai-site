@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bgGrad" cx="30%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#1A2233"/>
+      <stop offset="60%" stop-color="#0A0E18"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="75%" cy="80%" r="40%">
+      <stop offset="0%" stop-color="#378ADD" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#378ADD" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1F2A40" stroke-width="0.5" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#blueGlow)"/>
+
+  <!-- Eyebrow -->
+  <text x="80" y="170"
+        font-family="'Courier New', monospace"
+        font-size="20"
+        fill="#6FB1FF"
+        letter-spacing="3.5"
+        font-weight="500">
+    BUILT TO WIN.
+  </text>
+
+  <!-- Main headline (smaller, fits) -->
+  <text x="80" y="270"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="60"
+        fill="#F4F6FB"
+        font-weight="500"
+        letter-spacing="-1">
+    The first eDiscovery platform
+  </text>
+  <text x="80" y="345"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="60"
+        fill="#F4F6FB"
+        font-weight="500"
+        letter-spacing="-1">
+    that<tspan font-style="italic" fill="#6FB1FF" font-weight="400"> reads the case.</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="80" y="425"
+        font-family="Inter, sans-serif"
+        font-size="24"
+        fill="#A0A8B8"
+        font-weight="300">
+    AI-native litigation intelligence.
+  </text>
+
+  <!-- Divider -->
+  <line x1="80" y1="510" x2="1120" y2="510" stroke="#1F2A40" stroke-width="1"/>
+
+  <!-- Wordmark -->
+  <text x="80" y="565"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="38"
+        fill="#F4F6FB"
+        font-weight="500">
+    Merak<tspan font-style="italic" fill="#6FB1FF">Ai</tspan>
+  </text>
+
+  <!-- Tagline right -->
+  <text x="1120" y="560"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="22"
+        fill="#A0A8B8"
+        font-style="italic"
+        text-anchor="end">
+    Read the case.
+  </text>
+
+  <!-- Dot accent -->
+  <circle cx="1080" cy="170" r="6" fill="#6FB1FF" opacity="0.7"/>
+</svg>
